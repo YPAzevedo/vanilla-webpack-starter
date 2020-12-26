@@ -25,7 +25,7 @@ module.exports = (env = { mode: "production" }) => {
                   "@babel/preset-env",
                   {
                     corejs: 3,
-                    modules: false,
+                    modules: false, // Ensure no compilers transform your ES2015 module syntax into CommonJS modules (this is the default behavior of the popular Babel preset @babel/preset-env - see the documentation for more details).
                     useBuiltIns: "usage",
                   },
                 ],
